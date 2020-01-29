@@ -1,0 +1,37 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_WC
+3: Product:WC
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: URL: https://demowinston.fwcins.com/FWCPortal/User/Login/Login.html
+10: Current Label : Username is completely working.
+11: Current Label : Password is completely working.
+12:  : Login is completely working.
+13: Agent Log In is done Sucessfully
+14:  : Agency Contact is completely working.
+15: Agent Name is selected Sucessfully
+16:  : New Quote Button is clicked is completely working.
+17: Current Label : FEIN Number is Entered is completely working.
+18:  : Continue Button is clicked is completely working.
+19: New Quote is going to be created
+20:  : Click on State is completely working.
+21: Current Label : Class Code is completely working.
+22:  : Click on Continue is completely working.
+23: Current Label : Business Name is completely working.
+24: Insured Name / Business Name is : FCGA AUTM-205753873
+25:  : Click on Legal Entity is completely working.
+26: Current Label : Agent Entered DBA Name as Same as Business Name is completely working.
+27: Current Label : Address1 is been entered is completely working.
+28: Current Label : Address2 is been entered is completely working.
+29: Current Label : Zipcode is been entered is completely working.
+30:  : Click on EmployerLimit is completely working.
+31: Current Label : Effective date is been entered is completely working.
+32: Current Label : Current Experience Mod is entered is completely working.
+33: Current Label : Owner/Officer First Name is been entered is completely working.
+34: Current Label : Owner/Officer Last Name is been entered is completely working.
+35: Current Label : Owner/Officer percentage is been entered is completely working.
+36:  : Include radio button is clickedis not working due toTimed out after 100 seconds. Unable to locate the element

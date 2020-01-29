@@ -1,0 +1,77 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_GL
+3: Product:GL
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: URL: https://demowinston.fwcins.com/FWCPortal/User/Login/Login.html
+10: Current Label : Username is completely working.
+11: Current Label : Password is completely working.
+12: Agent Log In is done Sucessfully
+13: Agent Name is selected Sucessfully
+14: New Quote is going to be created
+15: Gatekeeper Question have been completed Sucessfully
+16: Current Label : Business Name is completely working.
+17: Current Label : Business Description is completely working.
+18: Current Label : Years In Business is completely working.
+19: Current Label : No of Claims is completely working.
+20: Current Label : No of Location is completely working.
+21: Current Label : No of Project is completely working.
+22: Risk Level have been completed Sucessfully
+23: Current Label : Expected Gross Amount is completely working.
+24: Current Label : Expected Sub Class Code Gross Amount is completely working.
+25: Current Label : Active Owner is completely working.
+26: Current Label : Enter Percentage is completely working.
+27: Error Message generated is : .
+28: Current Label : Percentage is completely working.
+29: Class & Payroll have been completed Sucessfully
+30: Aditional Insured have been completed Sucessfully
+31: Inland Marine have been completed Sucessfully
+32: Class Specific have been completed Sucessfully
+33: Quote Date : 01/27/2020
+34: Term: Annual
+35: County Name: Anderson/01
+36: Insured Name: FCGA AUTM -638441012
+37: Current Label : Enter Producer Fee is completely working.
+38: Download FWCI Quote Document
+39: Download CB Quote Document
+40: FWCI Premium: $1,163
+41: FWCI MGA Policy Fee: $90
+42: CB Premium: $1,198
+43: FWCI MGA Policy Fee: $90
+44: FWCI Producer Fee: $100
+45: CB Producer Fee: $90
+46: Click on FWCI Insurance Company
+47: Quote No: Q-39621
+48: Click on Application Button
+49: Quote Page have been completed Sucessfully
+50: Application Date of the Quote is :01/27/2020
+51: Current Label : Enter contact for inspection is completely working.
+52: Current Label : Enter 1st line of Address is completely working.
+53: Current Label : Enter 2nd line of Address is completely working.
+54: Current Label : Enter City Name is completely working.
+55: Current Label : Enter Zip Code is completely working.
+56: Current Label : Enter Business Phone Number is completely working.
+57: Current Label : Enter Business Emails is completely working.
+58: Current Label : Enter Business FEIN is completely working.
+59: Current Label : Enter Business Expiration Date is completely working.
+60: Current Label : Enter Insurance Carrier is completely working.
+61: Current Label : Enter Insurance Carrier is completely working.
+62: Current Label : Enter Industrial Percentage is completely working.
+63: Current Label : Enter New Construction Percentage is completely working.
+64: Current Label : Enter New Construction Percentage is completely working.
+65: Application Page have been completed Sucessfully
+66: ========********************************========
+67: New Quote is getting Created.
+68: 2-Straight Through Flow is getting Executed.
+69: UserName: Acentria36
+70: Password:AI495!
+71: URL: https://demowinston.fwcins.com/FWCPortal/User/Login/Login.html
+72: Current Label : Username is completely working.
+73: Current Label : Password is completely working.
+74: Agent Log In is done Sucessfully
+75: Agent Name is selected Sucessfully
+76: New Quote is going to be created

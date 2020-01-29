@@ -1,0 +1,36 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_WC
+3: Product:WC
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: URL: https://demowinston.fwcins.com/FWCPortal/User/Login/Login.html
+10: Current Label : Username is completely working.
+11: Current Label : Password is completely working.
+12:  : Login is completely working.
+13: Agent Log In is done Sucessfully
+14:  : Agency Contact is completely working.
+15:  : Continue Button is completely working.
+16: Agent Name is selected Sucessfully
+17:  : New Quote Button is clicked is completely working.
+18:  : WC Radio Button is clicked is completely working.
+19: Current Label : FEIN Number is Entered is completely working.
+20:  : Continue Button is clicked is completely working.
+21: New Quote is going to be created
+22:  : Click on State is completely working.
+23: Current Label : Class Code is completely working.
+24:  : Click on Continue is completely working.
+25: Current Label : Current Experience Mod is entered is completely working.
+26: Current Label : Owner/Officer First Name is been entered is completely working.
+27: Current Label : Owner/Officer Last Name is been entered is completely working.
+28: Current Label : Owner/Officer percentage is been entered is completely working.
+29:  : Exclude radio button is clicked is completely working.
+30: Current Label : Description is been entered is completely working.
+31: Current Label : Full time Employee is been entered is completely working.
+32: Current Label : Part time Employee is been entered is completely working.
+33: Current Label : Gross Annual Payroll is been entered is completely working.
+34:  : Next button is saved sucessfully. is completely working.
+35: Business Summary have been completed Sucessfully

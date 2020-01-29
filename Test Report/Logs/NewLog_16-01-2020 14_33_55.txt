@@ -1,0 +1,4 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : D:\FCGA\AUTOMATION\FSmokeSuitTD_GL
+3: Product:GL

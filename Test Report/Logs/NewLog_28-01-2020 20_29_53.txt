@@ -1,0 +1,32 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_WC
+3: Product:WC
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: URL: https://demowinston.fwcins.com/FWCPortal/User/Login/Login.html
+10: Current Label : Username is completely working.
+11: Current Label : Password is completely working.
+12:  : Login is completely working.
+13: Agent Log In is done Sucessfully
+14:  : Agency Contact is completely working.
+15: Agent Name is selected Sucessfully
+16:  : New Quote Button is clicked is completely working.
+17: Current Label : FEIN Number is Entered is completely working.
+18:  : Continue Button is clicked is completely working.
+19: New Quote is going to be created
+20:  : Click on State is completely working.
+21: Current Label : Class Code is completely working.
+22:  : Click on Continue is completely working.
+23:  : Exclude radio button is clickedis not working due tono such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-AIQJ01R', ip: '192.168.0.157', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\sanky\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54905}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fde6255e637124eb47ee84759cad86f8
+*** Element info: {Using=xpath, value=rdoCurrExpModYes}

@@ -1,0 +1,57 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_GL
+3: Product:GL
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: URL: https://dev_winston.fwcins.com/FWCPortal/User/Login/Login.html
+10: Current Label : Username is completely working.
+11: Current Label : Password is completely working.
+12: Agent Log In is done Sucessfully
+13: Agent Name is selected Sucessfully
+14: New Quote is going to be created
+15: Gatekeeper Question have been completed Sucessfully
+16: Current Label : Business Name is completely working.
+17: Current Label : Business Description is completely working.
+18: Current Label : Years In Business is completely working.
+19: Current Label : No of Claims is completely working.
+20: Current Label : No of Location is completely working.
+21: Current Label : No of Project is completely working.
+22: Risk Level have been completed Sucessfully
+23: Current Label : Expected Gross Amount is completely working.
+24: Current Label : Expected Sub Class Code Gross Amount is completely working.
+25: Current Label : Active Owner is completely working.
+26: Current Label : Enter Percentage is completely working.
+27: Error Message generated is : % of work entries must total 100%.
+28: Current Label : Percentage is completely working.
+29: Class & Payroll have been completed Sucessfully
+30: Aditional Insured have been completed Sucessfully
+31: Inland Marine have been completed Sucessfully
+32: Class Specific have been completed Sucessfully
+33: Quote Date : 01/15/2020
+34: Term: Annual
+35: County Name: Anderson/01
+36: Insured Name: FCGA AUTM -624648507
+37: Current Label : Enter Producer Fee is completely working.
+38: ========********************************========
+39: New Quote is getting Created.
+40: 2-Straight Through Flow is getting Executed.
+41: UserName: Acentria36
+42: Password:AI495!
+43: URL: https://dev_winston.fwcins.com/FWCPortal/User/Login/Login.html
+44: Current Label : Username is completely working.
+45: Current Label : Password is completely working.
+46: Agent Log In is done Sucessfully
+47: Agent Name is selected Sucessfully
+48: New Quote is going to be created
+49: Gatekeeper Question have been completed Sucessfully
+50: Current Label : Business Name is completely working.
+51: Current Label : Business Description is completely working.
+52: Current Label : Years In Business is completely working.
+53: Current Label : No of Claims is completely working.
+54: Current Label : No of Location is completely working.
+55: Current Label : No of Project is completely working.
+56: Risk Level have been completed Sucessfully

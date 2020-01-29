@@ -1,0 +1,14 @@
+
+1: Please Enter Product Name to start SmokeTest : (WC/GL)
+2: Sheet Name : TD_GL
+3: Product:GL
+4: ========********************************========
+5: New Quote is getting Created.
+6: 1-Straight Through Flow is getting Executed.
+7: UserName: Acentria36
+8: Password:AI495!
+9: ========********************************========
+10: New Quote is getting Created.
+11: 2-Straight Through Flow is getting Executed.
+12: UserName: Acentria36
+13: Password:AI495!
