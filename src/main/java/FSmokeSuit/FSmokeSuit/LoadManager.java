@@ -55,6 +55,7 @@ public class LoadManager implements Cloneable {
 		private String BusinessType;
 		private String PaymentOption;
 		private String DepositPaymentMethod;
+		private String LPCarrier;
 		
 		public Object clone() throws
 	     CloneNotSupportedException
@@ -432,6 +433,15 @@ public class LoadManager implements Cloneable {
 		
 		public String getWCGrossannualPayroll() {
 			return WCGrossannualPayroll;
+		}
+		
+		
+		public void setLPCarrier(String lpCarrier) {
+			LPCarrier = lpCarrier;
+		}
+		
+		public String getLPCarrier() {
+			return LPCarrier;
 		}
 		
 		

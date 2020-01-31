@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -37,6 +38,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -56,23 +58,71 @@ public class AutomationUtilities {
    public static WebDriverWait wait=null;
    public static Robot rbt;
    
-   
-   
-   public static void checkCheckBox(WebDriver driver, WebElement eElement, int iTimeOutSeconds,
-			String label ) throws IOException {
-	   System.out.println("Checkbox Function has been called");
-	   System.out.println("Driver" +driver);
-		if (waitTillClickable(eElement, iTimeOutSeconds, label)) {
-			drawBorder(eElement);
-			((JavascriptExecutor) driver).executeScript("arguments[0].click()",
-					eElement);
-			AutomationUtilities.LogSummary("pass", label + " is clicked");
-			AutomationUtilities.LogSummary(LogPath," : "+label+" is  working");
-			waitforpageload();
-		} else {
-			AutomationUtilities.LogSummary("fail", label + " cannot be clicked due to" );
-			
+  /* public void getDropDownList(WebDriver driver, WebElement element, String sLabel) {
+	   System.out.println("getDropDownList function has been called...");
+	   WebElement industries = driver.findElement(By.xpath("//ul[@id='select2-ddlInsuredName-results']"));
+		List<WebElement> InsuredNameList = industries.findElements(By.tagName("li"));
+		for (int i = 1; i < InsuredNameList.size(); i++)
+		{
+		    System.out.println("InsuredNameList :- "+InsuredNameList.get(i).getText());
+		    if(i==1) {
+		    	System.out.println("Skipped");
+		    }
+		    else{
+		    	WebElement option = InsuredNameList.get(i);
+		    	option.click();
+		    
+		    }
 		}
+	   
+   }
+   
+   */
+	public void selectDropdownlitag(WebDriver driver, WebElement element, String text, String sLabel)
+			throws IOException, InterruptedException {
+		System.out.println("Drop Down Fucntion has been called");
+		String searchText = text;
+
+		element.click(); 
+		Thread.sleep(2000);
+		List<WebElement> options = driver.findElements(By.tagName("li"));
+		for (WebElement option : options) {
+			if (option.getText().equals(searchText)) {
+				System.out.println("Search Text is true" + searchText);
+				option.click(); // click the desired option
+				break;
+			}
+		}
+	}
+   public void selectDropdownByText(WebElement element, String text,String sLabel) throws IOException {
+		try {		
+			System.out.println("Drop Down Fucntion has been called");
+			Select select = new Select(element);
+			select.selectByVisibleText(text);
+		}
+		catch(Exception e) {
+			AutomationUtilities.LogSummary("fail", "Dropdown element "+sLabel+" could not be selected");
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+   
+   
+   public static void checkCheckBox(WebDriver driver, WebElement element, int iTimeOutSeconds,
+			String label) throws IOException {
+		try {
+			System.out.println("Checkbox Function has been called");
+			System.out.println("Driver" + driver);
+			((JavascriptExecutor) driver).executeScript("arguments[0].click()", element);
+			AutomationUtilities.LogSummary("pass", label + " is clicked");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("fail :- " + label + "Element cannot be clicked due to" + e.getMessage());
+			AutomationUtilities.LogSummary("fail", label + " cannot be clicked due to" + e.getMessage());
+		}
+
 	}
 
    
@@ -92,28 +142,7 @@ public class AutomationUtilities {
 			System.out.println(label+" is not working due to" + e.getMessage());
 		}
 	}
-//   public void javascriptExecutorClick(WebDriver driver, WebElement element, String label) throws IOException {
-//		try {
-//			System.out.println("Javascript function called");
-//			System.out.println("driver ---"+driver);
-//			System.out.println("Element is:-"+ element);
-//			WebDriverWait wait = new WebDriverWait(driver,10);
-//			WebElement eElement = element;
-//			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(eElement))).click();
-////				waitTillClickable(element, 5, label);
-////			if (element.isEnabled() && element.isDisplayed()) {
-////				((JavascriptExecutor) driver).executeScript("arguements[0].click(, arg1);", element);
-////				((JavascriptExecutor)driver).executeScript("arguments[0].click();",element);
-////				System.out.println("Element has been selected");
-////				System.out.println(((JavascriptExecutor)driver).executeScript("document.getElementById('"+element+"').click();"));
-////				((JavascriptExecutor)driver).executeScript("document.getElementById('"+element+"').click();");
-//
-////			}
-//		} catch (Exception e) {
-//			AutomationUtilities.LogSummary(LogPath," : "+label+"is not working due to" + e.getMessage());
-//			System.out.println(label+" is not working due to" + e.getMessage());
-//		}
-//	}
+
    
    public static void drawBorder(WebElement element ) {		
 		if (driver2 instanceof JavascriptExecutor) {
@@ -129,11 +158,13 @@ public class AutomationUtilities {
 			
 		}	
 	
-	public static boolean waitTillClickable(WebElement eElement, int iTimeOut,
+	public static boolean waitTillClickable(WebDriver driver, WebElement element, int iTimeOut,
 			String label) {
-		wait = new WebDriverWait(driver2, iTimeOut);
+		System.out.println("waitTillClickable function has been called for "+iTimeOut +"seconds");
+		System.out.println("Driver...:" + driver);
+		wait = new WebDriverWait(driver, iTimeOut);
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable(eElement));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			return true;
 		} catch (Exception ex) {
 			return false;
@@ -168,7 +199,7 @@ public class AutomationUtilities {
 	public static void buttonClick2(WebDriver driver,WebElement eElement, int iTimeOutSeconds,
 			String sLabel) {
 		try{
-			if (waitTillClickable(eElement, iTimeOutSeconds, sLabel)) {
+			if (waitTillClickable(driver, eElement, iTimeOutSeconds, sLabel)) {
 				drawBorder(eElement);
 				((JavascriptExecutor) driver).executeScript("arguments[0].click()",
 						eElement);

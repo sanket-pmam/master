@@ -166,6 +166,13 @@ public class AutomationDriver {
 
 				objworkerscompensation.BusinessSummary(objLoadManager, objWebDriver);
 				objworkerscompensation.GeneralQuestions(objLoadManager, objWebDriver);
+				objworkerscompensation.Losses(objLoadManager, objWebDriver);
+//				objworkerscompensation.wcApplication(objLoadManager, objWebDriver);
+				
+			
+				String sBusinessNameValue = WorkersCompensation.sBusinessName;
+				System.out.println("sBusinessNameValue-----" +sBusinessNameValue);
+				objworkerscompensation.wcApplication(objLoadManager, objWebDriver, sBusinessNameValue);
 				System.out.println("WC Test Data is not been provided and incorporated. Please try Later.");
 			}
 

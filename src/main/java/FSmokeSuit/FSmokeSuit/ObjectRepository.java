@@ -485,9 +485,100 @@ public class ObjectRepository {
 	@FindBy (xpath="//input[@id='radio-21']")
 	public WebElement rdQuestion_13;
 	
-	
-	@FindBy (xpath="//input[@id='IQchk534BeddingnbspPlants`']")
+	@FindBy (xpath="//input[@id='IQchk534BeddingnbspPlants']")
 	public WebElement chkBedding;
+	
+	//Industrial Questions
+	
+	@FindBy (xpath="//input[@id='IQradio-3']")
+	public WebElement rdIQuestion_1;
+	
+	@FindBy (xpath="//input[@id='IQradio-4']")
+	public WebElement rdIQuestion_2;
+	
+	@FindBy (xpath="//input[@id='IQradio-9']")
+	public WebElement rdIQuestion_3;
+	
+	@FindBy (xpath="//input[@id='IQradio9']")
+	public WebElement rdIQuestion_4;
+	
+	@FindBy (xpath="//input[@id='IQradio-11']")
+	public WebElement rdIQuestion_5;
+	
+	@FindBy (xpath="//input[@id='IQradio-12']")
+	public WebElement rdIQuestion_6;
+	
+	@FindBy (xpath="//input[@id='IQradio-13']")
+	public WebElement rdIQuestion_7;
+	
+	@FindBy (xpath="//input[@id='IQradio13']")
+	public WebElement rdIQuestion_8;
+	
+	@FindBy (xpath="//input[@id='IQradio14']")
+	public WebElement rdIQuestion_9;
+	
+	@FindBy (xpath="//input[@id='IQradio-16']")
+	public WebElement rdIQuestion_10;
+	
+	@FindBy (xpath="//input[@id='IQradio-17']")
+	public WebElement rdIQuestion_11;
+	
+	@FindBy (xpath="//input[@id='IQradio-18']")
+	public WebElement rdIQuestion_12;
+	
+	@FindBy (xpath="//input[@id='IQradio19']")
+	public WebElement rdIQuestion_13;
+
+	@FindBy (xpath="//input[@id='IQradio20']")
+	public WebElement rdIQuestion_14;
+	
+	@FindBy (xpath="//input[@id='IQradio-22']")
+	public WebElement rdIQuestion_15;
+	
+//	Losses Page elemnet
+	
+	@FindBy (xpath="//span[@id='select2-ddlHadCoverage2020-container']")
+	public WebElement gethadCoverage;
+	
+	@FindBy (xpath="//input[@id='radioN2020']")
+	public WebElement rdAnyLosses;
+	
+	@FindBy (xpath="//input[@id='BtnSubmit']")
+	public WebElement btnSubmit;
+	
+	@FindBy (xpath="//input[@id='carrier0']")
+	public WebElement gettxtLossCarrier;
+	
+	@FindBy (xpath="//span[@id='select2-ddlInsuredName-container']")
+	public WebElement selWCNameInsured;
+	
+	@FindBy (xpath="//ul[@id='select2-ddlInsuredName-results']")
+	public WebElement WCNameInsuredresult;
+	
+	@FindBy (xpath="//span[@id='select2-ddlRelationship-container']")
+	public WebElement WCApplicationRelationsip;
+	
+	@FindBy (xpath="//input[@id='txtLocationAddress1']")
+	public WebElement WAppliactionCAddress1;
+	
+	@FindBy (xpath="//input[@id='txtLocationCity']")
+	public WebElement WCAppliactionCity;
+	
+	@FindBy (xpath="//span[@id='select2-ddlLocationState-container']")
+	public WebElement WCAppliactionState;
+	
+	@FindBy (xpath="//span[@id='txtLocationZip']")
+	public WebElement WCAppliactionZipcode;
+	
+	@FindBy (xpath="//input[@id='btnAddLocation']")
+	public WebElement WCAppliactionAddLoact;
+	
+	
+	@FindBy (xpath="//li[contains(text(), 'FCGA AUTM-361785710DB')]")
+	public WebElement WCNameInsuredList1;
+	
+	@FindBy (xpath="//ul[@id='select2-ddlInsuredName-results']")
+	public WebElement WCNameInsuredtxt;
 	
 	//------------------
 	
@@ -1110,5 +1201,108 @@ public class ObjectRepository {
   public WebElement chkBedding() {
 	  return chkBedding;
   }
+  
+  //industrial question
+  
+  public WebElement rdIQuestion_1() {
+	  return rdIQuestion_1;
+  }
+  public WebElement rdIQuestion_2() {
+	  return rdIQuestion_2;
+  }
+  public WebElement rdIQuestion_3() {
+	  return rdIQuestion_3;
+  }
+  public WebElement rdIQuestion_4() {
+	  return rdIQuestion_4;
+  }
+  public WebElement rdIQuestion_5() {
+	  return rdIQuestion_5;
+  }
+  public WebElement rdIQuestion_6() {
+	  return rdIQuestion_6;
+  }
+  public WebElement rdIQuestion_7() {
+	  return rdIQuestion_7;
+  }
+  public WebElement rdIQuestion_8() {
+	  return rdIQuestion_8;
+  }
+  public WebElement rdIQuestion_9() {
+	  return rdIQuestion_9;
+  }
+  public WebElement rdIQuestion_10() {
+	  return rdIQuestion_10;
+  }
+  public WebElement rdIQuestion_11() {
+	  return rdIQuestion_11;
+  }
+  public WebElement rdIQuestion_12() {
+	  return rdIQuestion_12;
+  }
+  public WebElement rdIQuestion_13() {
+	  return rdIQuestion_13;
+  }
+  public WebElement rdIQuestion_14() {
+	  return rdIQuestion_14;
+  }
+  public WebElement rdIQuestion_15() {
+	  return rdIQuestion_15;
+  }
+  
+  
+  //Lossess
+  public WebElement gethadCoverage() {
+	  return gethadCoverage;
+  }
+  public WebElement rdAnyLosses() {
+	  return rdAnyLosses;
+  }
+  public WebElement btnSubmit() {
+	  return btnSubmit;
+  }
+  public WebElement gettxtLossCarrier() {
+	  return gettxtLossCarrier;
+  }
+  
+  public WebElement selWCNameInsured() {
+	  return selWCNameInsured;
+  }
+  
+  public WebElement WCNameInsuredresult() {
+	  return WCNameInsuredresult;
+  }
+  
+  
+  public WebElement WCApplicationRelationsip() {
+	  return WCApplicationRelationsip;
+  }
+  public WebElement WAppliactionCAddress1() {
+	  return WAppliactionCAddress1;
+  }
+  
+  public WebElement WAppliactionCity() {
+	  return WCAppliactionCity;
+  }
+  public WebElement WAppliactionState() {
+	  return WCAppliactionState;
+  }
+  public WebElement WCAppliactionZipcode() {
+	  return WCAppliactionZipcode;
+  }
+  
+  public WebElement WAppliactionAddLoact() {
+	  return WCAppliactionAddLoact;
+  }
+  
+  public WebElement WCNameInsuredList1() {
+	  return WCNameInsuredList1;
+  }
+  public WebElement WCNameInsuredtxt() {
+	  return WCNameInsuredtxt;
+  }
+  
+	
+  
   
 }
