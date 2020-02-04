@@ -82,7 +82,7 @@ public class AutomationUtilities {
 			throws IOException, InterruptedException {
 		System.out.println("Drop Down Fucntion has been called");
 		String searchText = text;
-
+		System.out.println("Search Text..." +searchText);
 		element.click(); 
 		Thread.sleep(2000);
 		List<WebElement> options = driver.findElements(By.tagName("li"));

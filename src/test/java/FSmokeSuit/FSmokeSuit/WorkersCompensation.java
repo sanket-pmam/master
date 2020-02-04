@@ -242,30 +242,65 @@ public class WorkersCompensation extends AutomationUtilities {
 		System.out.println("Clicking on Name Insured Drop Down");
 		WebElement selWCNameInsured_element = objectrepository.selWCNameInsured();
 		selWCNameInsured_element.click();
-		
+
 		System.out.println("Clicking on Name Insured Drop Down Text box...");
-		WebElement WCNameInsuredtxt_element =  objectrepository.WCNameInsuredtxt();
-		WCNameInsuredtxt_element .click();
+		WebElement WCNameInsuredtxt_element = objectrepository.WCNameInsuredtxt();
+		WCNameInsuredtxt_element.click();
 
 		Thread.sleep(3000);
 		System.out.println("Selecting WCNameInsuredList1");
-		
+
 //		selectDropdownlitag(driver, objectrepository.WCNameInsuredList1(), "Primary", "Relaionship");
+
+		System.out.println("Selecting relationship");
+
+		selectDropdownlitag(driver, objectrepository.WCApplicationRelationsip(), "Primary", "Relaionship");
+		sendKeysToTextField(objectrepository.WAppliactionCAddress1(), objWCLoadManager.getWCAddress1(),
+				"WC Application Address");
+//		sendKeysToTextField(objectrepository.WAppliactionCity(), "Test","WC Application City"); // Temp commenting this line to add city
+		sendKeysToTextField(objectrepository.WAppliactionCity(), objWCLoadManager.getWCCity(), "WC Application City"); // objWCLoadManager.getLocationCity()
+		buttonClick(objectrepository.WAppliactionState(), 10, "WC Application State drop down");
+		Thread.sleep(2000);
+		EsendKeysToTextField(objectrepository.gettxtUniquetextbox(), objWCLoadManager.getWCState(), "State Name"); // objWCLoadManager.getWCLegalEntity()
+		sendKeysToTextField(objectrepository.WCAppliactionZipcode(), objWCLoadManager.getWCZipCode(),
+				"WC Application Zipcode"); // objWCLoadManager.getWCZipCode()
+		buttonClick(objectrepository.WAppliactionAddLoact(), 10, "Add Location button");
+		System.out.println("First Address has been added successfully....!");
+		AutomationUtilities.Screenshot(tcSnapPath, testCaseID);
+
 		
-		System.out.println("Selecting relationship" );
+		//Adding Second Address
+		System.out.println("Drop Down to select name insured");
+		Thread.sleep(3000);
+		System.out.println("Clicking on Name Insured Drop Down");
+//		WebElement selWCNameInsured_element2 = objectrepository.selWCNameInsured();
+//		selWCNameInsured_element2.click();
+		System.out.println("Clicking on Name Insured Drop Down Text box...");
+		selectDropdownlitag(driver, objectrepository.selWCNameInsured(),  objWCLoadManager.getWCFirstName() +" "+ objWCLoadManager.getWCLastName(), "Name Insured");
+//		selectDropdownlitag(driver, objectrepository.WCNameInsuredtxt2(),  objWCLoadManager.getWCFirstName()+ objWCLoadManager.getWCFirstName(), "Name Insured");
+
+		System.out.println("Selecting relationship");
 		
 		selectDropdownlitag(driver, objectrepository.WCApplicationRelationsip(), "Primary", "Relaionship");
-		sendKeysToTextField(objectrepository.WAppliactionCAddress1(), "Test","WC Application Address");
+		sendKeysToTextField(objectrepository.WAppliactionCAddress1(), objWCLoadManager.getWCAddress1(),
+				"WC Application Address");
 //		sendKeysToTextField(objectrepository.WAppliactionCity(), "Test","WC Application City"); // Temp commenting this line to add city
-		sendKeysToTextField(objectrepository.WAppliactionCity(),"Tampa","WC Application City");
-		buttonClick(objectrepository.WAppliactionState(),10,"WC Application State drop down"); 
+		sendKeysToTextField(objectrepository.WAppliactionCity(), objWCLoadManager.getWCCity(), "WC Application City"); // objWCLoadManager.getLocationCity()
+		buttonClick(objectrepository.WAppliactionState(), 10, "WC Application State drop down");
 		Thread.sleep(2000);
-		EsendKeysToTextField(objectrepository.gettxtUniquetextbox(), "Florida","State Name");
-		sendKeysToTextField(objectrepository.WCAppliactionZipcode(),"33604","WC Application Zipcode");
-		buttonClick(objectrepository.WAppliactionAddLoact(),10,"Add Location button");
+		EsendKeysToTextField(objectrepository.gettxtUniquetextbox(), objWCLoadManager.getWCState(), "State Name"); // objWCLoadManager.getWCLegalEntity()
+		sendKeysToTextField(objectrepository.WCAppliactionZipcode(), objWCLoadManager.getWCZipCode(),
+				"WC Application Zipcode"); // objWCLoadManager.getWCZipCode()
+		buttonClick(objectrepository.WAppliactionAddLoact(), 10, "Add Location button");
+		System.out.println("Second Address has been added successfully....!");
+		AutomationUtilities.Screenshot(tcSnapPath, testCaseID);
 		
-		
-
+		//Main insured Contact information
+		selectDropdownlitag(driver, objectrepository.WCconatactMailingAddress(), objWCLoadManager.getWCZipCode(), "Contact Mailing Address");
+		sendKeysToTextField(objectrepository.WCcontactCity(), objWCLoadManager.getWCFirstName(), "Contact infromation Name");
+		sendKeysToTextField(objectrepository.WCcontactCity(), objWCLoadManager.getWCCity(), "Contact infromation City");
+		sendKeysToTextField(objectrepository.WCcontactCity(), objWCLoadManager.getWCcontactEmail(), "Contact infromation Email");
+		sendKeysToTextField(objectrepository.WCcontactCity(), objWCLoadManager.getWCcontactPhone(), "Contact infromation Phone Number");
 
 	}
 

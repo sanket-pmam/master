@@ -31,6 +31,7 @@ public class LoadManager implements Cloneable {
 		private String InstallationFloater;
 		private String ContractorsHandTools;
 		private String RentedorLeasedEquipment;
+		private String WCCity;
 		private String WCState;
 		private String WCClassCode;
 		private String WCLegalEntity;
@@ -56,6 +57,8 @@ public class LoadManager implements Cloneable {
 		private String PaymentOption;
 		private String DepositPaymentMethod;
 		private String LPCarrier;
+		private String WCcontactEmail;
+		private String WCcontactPhone;
 		
 		public Object clone() throws
 	     CloneNotSupportedException
@@ -317,6 +320,14 @@ public class LoadManager implements Cloneable {
 			return DepositPaymentMethod;	
 		}
 		//----- WC Load Manager ------ 
+		
+		public void setWCCity(String wccity) {
+			WCCity = wccity;
+		}
+		public String getWCCity() {
+			return WCCity;
+		}
+		
 		public void setWCState(String wcstate) {
 			WCState = wcstate;
 		}
@@ -442,6 +453,22 @@ public class LoadManager implements Cloneable {
 		
 		public String getLPCarrier() {
 			return LPCarrier;
+		}
+		
+		public void setWCcontactEmail(String wcContactEmail) {
+			WCcontactEmail = wcContactEmail;
+		}
+		
+		public String getWCcontactEmail() {
+			return WCcontactEmail;
+		}
+		
+		public void setWCcontactPhone(String wcContactPhone) {
+			WCcontactPhone = wcContactPhone;
+		}
+		
+		public String getWCcontactPhone() {
+			return WCcontactPhone;
 		}
 		
 		

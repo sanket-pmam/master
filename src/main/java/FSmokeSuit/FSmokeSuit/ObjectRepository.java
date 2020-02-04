@@ -567,7 +567,7 @@ public class ObjectRepository {
 	@FindBy (xpath="//span[@id='select2-ddlLocationState-container']")
 	public WebElement WCAppliactionState;
 	
-	@FindBy (xpath="//span[@id='txtLocationZip']")
+	@FindBy (xpath="//input[@id='txtLocationZip']")
 	public WebElement WCAppliactionZipcode;
 	
 	@FindBy (xpath="//input[@id='btnAddLocation']")
@@ -579,6 +579,35 @@ public class ObjectRepository {
 	
 	@FindBy (xpath="//ul[@id='select2-ddlInsuredName-results']")
 	public WebElement WCNameInsuredtxt;
+	
+	@FindBy (xpath="//li[contains(text(),'Sid Mishra')]")
+	public WebElement 	WCNameInsuredtxt2;
+	
+	//span[@id='select2-ddlMainInsuredMailingAddr-container']
+	@FindBy (xpath="//input[@id='txtMainInsuredContactName']")
+	public WebElement WCconatactMailingAddress;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredContactName']")
+	public WebElement WCconatactName;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredPhone']")
+	public WebElement WCcontactPhone;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredEmail']")
+	public WebElement WCcontactEmail;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredAddress1']")
+	public WebElement WCcontactAddress1;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredCity']")
+	public WebElement WCcontactCity;
+	
+	@FindBy (xpath="//span[@id='select2-ddlMainInsuredState-container']")
+	public WebElement WCcontactState;
+	
+	@FindBy (xpath="//input[@id='txtMainInsuredZip']")
+	public WebElement WCcontactZipCode;
+	
 	
 	//------------------
 	
@@ -1302,7 +1331,36 @@ public class ObjectRepository {
 	  return WCNameInsuredtxt;
   }
   
-	
+  public WebElement WCNameInsuredtxt2() {
+	  return WCNameInsuredtxt2;
+  }
   
+  public WebElement WCconatactName() {
+	  return WCconatactName;
+  }
+  public WebElement WCconatactMailingAddress() {
+	  return WCconatactMailingAddress;
+  }
+  
+  public WebElement WCcontactPhone() {
+	  return WCcontactPhone;
+  }
+  
+  public WebElement WCcontactEmail() {
+	  return WCcontactEmail;
+  }
+  
+  public WebElement WCcontactAddress1() {
+	  return WCcontactAddress1;
+  }
+  public WebElement WCcontactCity() {
+	  return WCcontactCity;
+  }
+  public WebElement WCcontactState() {
+	  return WCcontactState;
+  }
+  public WebElement WCcontactZipCode() {
+	  return WCcontactZipCode;
+  }
   
 }

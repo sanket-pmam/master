@@ -163,27 +163,30 @@ return testCaseData;
 	                	case 4:  dataObj.setExecutionStatus(cellObj.getStringCellValue()); break;
 	                	
 	                	//-----------------------------------------------------
-	                	case 5:   dataObj.setWCState(cellObj.getStringCellValue()); break;
-	                	case 6:   dataObj.setWCClassCode(cellObj.getStringCellValue()); break;
-	                	case 7:   dataObj.setWCLegalEntity(cellObj.getStringCellValue()); break;
-	                	case 8:   dataObj.setWCAddress1(cellObj.getStringCellValue()); break;
-	                	case 9:   dataObj.setWCAddress2(cellObj.getStringCellValue()); break;
-	                	case 10:  dataObj.setWCZipCode(cellObj.getStringCellValue()); break;
-	                	case 11:  dataObj.setWCEmployerLimit(cellObj.getStringCellValue()); break;
-	                	case 12:  dataObj.setWCExpMod(cellObj.getStringCellValue()); break;
-	                	case 13:  dataObj.setWCFirstName(cellObj.getStringCellValue()); break;
-	                	case 14:  dataObj.setWCLastName(cellObj.getStringCellValue()); break;
-	                	case 15:  dataObj.setWCPerOwner(cellObj.getStringCellValue()); break;
-	                	case 16:  dataObj.setWCInclude(cellObj.getStringCellValue()); break;
-	                	case 17:  dataObj.setWCFTEmployee(cellObj.getStringCellValue()); break; 
-	                	case 18:  dataObj.setWCPTEmployee(cellObj.getStringCellValue()); break;
-	                	case 19:  dataObj.setWCGrossannualPayroll(cellObj.getStringCellValue()); break;
+	                	case 5:   dataObj.setWCCity(cellObj.getStringCellValue()); break;
+	                	case 6:   dataObj.setWCState(cellObj.getStringCellValue()); break;
+	                	case 7:   dataObj.setWCClassCode(cellObj.getStringCellValue()); break;
+	                	case 8:   dataObj.setWCLegalEntity(cellObj.getStringCellValue()); break;
+	                	case 9:   dataObj.setWCAddress1(cellObj.getStringCellValue()); break;
+	                	case 10:   dataObj.setWCAddress2(cellObj.getStringCellValue()); break;
+	                	case 11:  dataObj.setWCZipCode(cellObj.getStringCellValue()); break;
+	                	case 12:  dataObj.setWCEmployerLimit(cellObj.getStringCellValue()); break;
+	                	case 13:  dataObj.setWCExpMod(cellObj.getStringCellValue()); break;
+	                	case 14:  dataObj.setWCFirstName(cellObj.getStringCellValue()); break;
+	                	case 15:  dataObj.setWCLastName(cellObj.getStringCellValue()); break;
+	                	case 16:  dataObj.setWCPerOwner(cellObj.getStringCellValue()); break;
+	                	case 17:  dataObj.setWCInclude(cellObj.getStringCellValue()); break;
+	                	case 18:  dataObj.setWCFTEmployee(cellObj.getStringCellValue()); break; 
+	                	case 19:  dataObj.setWCPTEmployee(cellObj.getStringCellValue()); break;
+	                	case 20:  dataObj.setWCGrossannualPayroll(cellObj.getStringCellValue()); break;
+	                	case 21:  dataObj.setWCcontactEmail(cellObj.getStringCellValue()); break;
+	                	case 22:  dataObj.setWCcontactPhone(cellObj.getStringCellValue()); break;
 	                	
 	                	//-----------------------------------------------------
 	                	
-	                	case 20:  dataObj.setScriptStatus(cellObj.getStringCellValue()); break;   
-	                	case 21:  dataObj.setQuoteNo(cellObj.getStringCellValue()); break;
-	                	case 22:  dataObj.setPolicyNo(cellObj.getStringCellValue()); break;
+	                	case 23:  dataObj.setScriptStatus(cellObj.getStringCellValue()); break;   
+	                	case 24:  dataObj.setQuoteNo(cellObj.getStringCellValue()); break;
+	                	case 25:  dataObj.setPolicyNo(cellObj.getStringCellValue()); break;
 	                	
 	                	
 	                	}	                	
