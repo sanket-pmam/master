@@ -15,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class AutomationDriver {
 
 	private static WebDriver objWebDriver = null;
@@ -89,29 +91,16 @@ public class AutomationDriver {
 					objLoadManager.getTestCaseId() + "-" + objLoadManager.getTCScenarios() + " is getting Executed.");
 			AutomationUtilities.LogSummary(TCLogPath,
 					objLoadManager.getTestCaseId() + "-" + objLoadManager.getTCScenarios() + " is getting Executed.");
-
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + AutomationUtilities.getDataFromPropertiesFile("CHROME_DRIVER_PATH"));
+//			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + AutomationUtilities.getDataFromPropertiesFile("CHROME_DRIVER_PATH"));
+			WebDriverManager.chromedriver().setup();
+			objWebDriver = new ChromeDriver();
 			UserName = AutomationUtilities.getDataFromPropertiesFile("USER_NAME");
 			Password = AutomationUtilities.getDataFromPropertiesFile("PASSWORD");
 			AutomationUtilities.LogSummary(TCLogPath, "UserName: " + UserName);
 			AutomationUtilities.LogSummary(TCLogPath, "Password:" + Password);
 			
-//			String PDFFILEPATH = System.getProperty("user.dir") + AutomationUtilities.getDataFromPropertiesFile("PDFFILEPATH");
-//			System.out.println("Set new path for PDF:>>>>>>>>>>>>>>"+PDFFILEPATH);
-//			HashMap<String, Object> chrompref = new HashMap<String, Object>();
-//			chrompref.put("download.default_directory", PDFFILEPATH);
-//			chrompref.put("plugins.always_open_pdf_externally", true);	
-//			chrompref.put("plugins.plugins_disabled","Chrome PDF Viewer");
-//			chrompref.put("plugins.plugins_disabled", new String[] {"Chrome PDF Viewer"});
-			
-			
 			ChromeOptions options = new ChromeOptions();
-//			coptions.setExperimentalOption("prefs", chrompref);
-//			options.setCapability("directory_upgrade","true");
-//			options.setCapability("download.prompt_for_download","false");
-//			options.setCapability(ChromeOptions.CAPABILITY, options);
-			
+
 			objWebDriver = new ChromeDriver(options);
 			objWebDriver.manage().timeouts().implicitlyWait(130, TimeUnit.SECONDS);
 
