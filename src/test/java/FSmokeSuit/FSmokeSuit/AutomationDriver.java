@@ -91,8 +91,8 @@ public class AutomationDriver {
 					objLoadManager.getTestCaseId() + "-" + objLoadManager.getTCScenarios() + " is getting Executed.");
 			AutomationUtilities.LogSummary(TCLogPath,
 					objLoadManager.getTestCaseId() + "-" + objLoadManager.getTCScenarios() + " is getting Executed.");
-//			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + AutomationUtilities.getDataFromPropertiesFile("CHROME_DRIVER_PATH"));
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + AutomationUtilities.getDataFromPropertiesFile("CHROME_DRIVER_PATH"));
+//			WebDriverManager.chromedriver().setup();
 			objWebDriver = new ChromeDriver();
 			UserName = AutomationUtilities.getDataFromPropertiesFile("USER_NAME");
 			Password = AutomationUtilities.getDataFromPropertiesFile("PASSWORD");
@@ -115,13 +115,13 @@ public class AutomationDriver {
 			objWebDriver.manage().timeouts().pageLoadTimeout(210, TimeUnit.SECONDS);
 			AutomationUtilities.Screenshot(TCSnapPath, TestCaseID);
 
-			objLoginPage.Agentlogin(UserName, Password);
+			objLoginPage.Agentlogin(objWebDriver, UserName, Password);
 			AutomationUtilities.Screenshot(TCSnapPath, TestCaseID);
 
 			objhomepage.SelectAgent(objLoadManager.getAgentName());
 			AutomationUtilities.Screenshot(TCSnapPath, TestCaseID);
 
-			objhomepage.CreateNewQuote(objLoadManager.getProduct());
+			objhomepage.CreateNewQuote(objWebDriver, objLoadManager.getProduct());
 
 			if (objLoadManager.getProduct().contains("GL")) {
 
@@ -156,14 +156,15 @@ public class AutomationDriver {
 				objworkerscompensation.BusinessSummary(objLoadManager, objWebDriver);
 				objworkerscompensation.GeneralQuestions(objLoadManager, objWebDriver);
 				objworkerscompensation.Losses(objLoadManager, objWebDriver);
-//				objworkerscompensation.wcApplication(objLoadManager, objWebDriver);
+				objworkerscompensation.wcApplication(objLoadManager, objWebDriver);
 				
 			
 				String sBusinessNameValue = WorkersCompensation.sBusinessName;
 				System.out.println("sBusinessNameValue-----" +sBusinessNameValue);
-				objworkerscompensation.wcApplication(objLoadManager, objWebDriver, sBusinessNameValue);
+				objworkerscompensation.wcApplication(objLoadManager, objWebDriver);
+				objgeneralliability.PolicyIssue(objLoadManager, objWebDriver);
 				System.out.println("WC Test Data is not been provided and incorporated. Please try Later.");
-			}
+			}		
 
 //			objWebDriver.close();
 //			objWebDriver.quit();

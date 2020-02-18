@@ -78,6 +78,7 @@ public class AutomationUtilities {
    }
    
    */
+   
 	public void selectDropdownlitag(WebDriver driver, WebElement element, String text, String sLabel)
 			throws IOException, InterruptedException {
 		System.out.println("Drop Down Fucntion has been called");
@@ -144,15 +145,15 @@ public class AutomationUtilities {
 	}
 
    
-   public static void drawBorder(WebElement element ) {		
-		if (driver2 instanceof JavascriptExecutor) {
-	        ((JavascriptExecutor)driver2).executeScript("arguments[0].style.border='6.5px solid rgb(0, 230, 0)'", element);	        
+   public static void drawBorder(WebDriver driver, WebElement element ) {		
+		if (driver instanceof JavascriptExecutor) {
+	        ((JavascriptExecutor)driver).executeScript("arguments[0].style.border='6.5px solid rgb(0, 230, 0)'", element);	        
 		  }
 	    }
    
 //	public static void buttonClick(WebElement element, int waitAfterClick, String label) throws InterruptedException, IOException {
    public static void buttonClick(WebElement element, int waitAfterClick, String label) throws InterruptedException, IOException {
-			drawBorder(element);
+//			drawBorder(element);
 			element.click(); 
 			AutomationUtilities.LogSummary(LogPath," : "+label+" is completely working.");
 			
@@ -200,7 +201,7 @@ public class AutomationUtilities {
 			String sLabel) {
 		try{
 			if (waitTillClickable(driver, eElement, iTimeOutSeconds, sLabel)) {
-				drawBorder(eElement);
+//				drawBorder(eElement);
 				((JavascriptExecutor) driver).executeScript("arguments[0].click()",
 						eElement);
 				waitforpageload();
@@ -241,7 +242,16 @@ public class AutomationUtilities {
    }
    
 public static void sendKeysToTextField(WebElement element, String text, String label) throws InterruptedException, IOException {
-	drawBorder(element);
+//	drawBorder(element);
+	element.sendKeys(Keys.chord(Keys.CONTROL, "a"), text);
+	Thread.sleep(2000);
+	element.sendKeys(Keys.TAB);
+	AutomationUtilities.LogSummary(LogPath,"Current Label : "+label+" is completely working.");
+	System.out.println("Current Label : "+label+" is completely working.");
+}
+
+public static void sendKeysToTextField2(WebDriver driver, WebElement element, String text, String label) throws InterruptedException, IOException { 
+	drawBorder(driver, element); 
 	element.sendKeys(Keys.chord(Keys.CONTROL, "a"), text);
 	Thread.sleep(2000);
 	element.sendKeys(Keys.TAB);
@@ -250,7 +260,7 @@ public static void sendKeysToTextField(WebElement element, String text, String l
 }
 
 public static void EsendKeysToTextField(WebElement element, String text, String label) throws InterruptedException {
-	drawBorder(element);
+//	drawBorder(element);
 	element.sendKeys(Keys.chord(Keys.CONTROL, "a"), text);
 	element.sendKeys(Keys.ENTER);
 	Thread.sleep(1000);

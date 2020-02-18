@@ -305,7 +305,8 @@ public class GeneralLiability extends AutomationUtilities {
         AutomationUtilities.LogSummary(LogPath,"Class Specific have been completed Sucessfully");
 	}
 
-	public void Quote (LoadManager objGlLoadManager,WebDriver driver) throws IOException, InterruptedException, AWTException, UnsupportedFlavorException {
+
+public void Quote (LoadManager objGlLoadManager,WebDriver driver) throws IOException, InterruptedException, AWTException, UnsupportedFlavorException {
 		
 		
 		driver.manage().timeouts().pageLoadTimeout(5000, TimeUnit.SECONDS);
@@ -409,6 +410,7 @@ public class GeneralLiability extends AutomationUtilities {
 	 buttonClick(objectrepository.getbtn_CloseProducerFee(),10,"Click on Button Close");
 	 AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
 	 
+	 Thread.sleep(3000);
 	 AutomationUtilities.QuoteNo = objectrepository.getlbl_QuoteNo().getText();
 	 System.out.println("Quote No: "+ objectrepository.getlbl_QuoteNo().getText());
      AutomationUtilities.LogSummary(LogPath,"Quote No: "+ objectrepository.getlbl_QuoteNo().getText());
@@ -506,12 +508,15 @@ public class GeneralLiability extends AutomationUtilities {
 		buttonClick(objectrepository.getrdoAgree(),10,"Click on Agree radio button");
 		AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
 		
-		buttonClick(objectrepository.getbtnPrintSubmit(),10,"Click on Print & Submit Application");
+		
+		//Temporarily Commenting till download logic is revised 
+		
+		/*buttonClick(objectrepository.getbtnPrintSubmit(),10,"Click on Print & Submit Application");
 		AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
 		Thread.sleep(15000);
 		
 		AutomationUtilities.Traverse(driver,"Download Application Document");
-	    AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
+	    AutomationUtilities.Screenshot(tcSnapPath,testCaseID);*/
 		
 		buttonClick(objectrepository.getbtnPaymentIssue(),10,"Click on Print & Submit Application");
 		AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
@@ -523,9 +528,11 @@ public class GeneralLiability extends AutomationUtilities {
 	}
 	
 	public void PolicyIssue (LoadManager objGlLoadManager,WebDriver driver) throws InterruptedException, AWTException, IOException, UnsupportedFlavorException {
-		
+		System.out.println("Policy Issue Page function has been called!");
+//		WebElement getchkIssue_Line123 = objectrepository.getchkIssue_Line123();
+//		System.out.println("getchkIssue_Line123" + getchkIssue_Line123);
 		Thread.sleep(10000);
-		//objectrepository.getchkIssue_Line1().click();
+//		objectrepository.getchkIssue_Line1().click();
 		/*************NEW CODE START**************/
 		WebElement element = objectrepository.getchkIssue_Line1();
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -538,7 +545,7 @@ public class GeneralLiability extends AutomationUtilities {
 		/*************NEW CODE ENDS**************/
 		
 		
-		//buttonClick(objectrepository.getchkIssue_Line1(),10,"Click on Line1");
+//		buttonClick(objectrepository.getchkIssue_Line1(),10,"Click on Line1");
 //		AutomationUtilities.Screenshot(tcSnapPath,testCaseID);
 		
 //		buttonClick(objectrepository.getchkIssue_Line2(),10,"Click on Line1");

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
 public class HomePage extends AutomationUtilities {
@@ -29,9 +30,8 @@ public class HomePage extends AutomationUtilities {
 		    AutomationUtilities.LogSummary(LogPath,"Agent Name is selected Sucessfully");
 		}
 		
-		public void CreateNewQuote (String sProductName) throws InterruptedException, IOException 
+		public void CreateNewQuote (WebDriver driver, String sProductName) throws InterruptedException, IOException 
 		{
-			
 			Thread.sleep(20000);
 			System.out.println("On quote Page...");
 			buttonClick(objectrepository.getbtnNewQuote(),10,"New Quote Button is clicked");

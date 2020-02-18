@@ -317,6 +317,9 @@ public class ObjectRepository {
 	@FindBy(xpath = "//button[@data-resin-target='download']")
 	private static WebElement Applicationdownload;
 	
+	@FindBy(xpath = "chkIssue_1")
+	private WebElement chkIssue_Line123;
+	
 	@FindBy(xpath = "//label[@for='chkIssue_1']")
 	private WebElement chkIssue_Line1;
 	
@@ -1129,6 +1132,11 @@ public class ObjectRepository {
   public WebElement getbtnPaymentIssue() {
   return btnPaymentIssue;
   }
+  
+  public WebElement getchkIssue_Line123() {
+	  return chkIssue_Line123;
+  }
+  
   
   public WebElement getchkIssue_Line1() {
 	  return chkIssue_Line1;

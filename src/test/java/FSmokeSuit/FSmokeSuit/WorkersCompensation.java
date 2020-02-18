@@ -231,7 +231,7 @@ public class WorkersCompensation extends AutomationUtilities {
 		System.out.println("Losses Page has been completed");
 	}
 
-	public void wcApplication(LoadManager objWCLoadManager, WebDriver driver, String sBusinessNameValue)
+	public void wcApplication(LoadManager objWCLoadManager, WebDriver driver)
 			throws IOException, InterruptedException, AWTException, UnsupportedFlavorException {
 		System.out.println("Application function has been called");
 		System.out.println("Driver" + driver);
